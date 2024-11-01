@@ -1,0 +1,223 @@
+/* ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/* ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/* ----- Imports ----- */
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; npm install modern-normalize Resets elements for browser consistency. https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css"; Component-specific stylesheets, if any. */
+/* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');
+
+
+/* ----- Variables ----- */
+:root {
+    --custom-blue: #BACBD9;
+    --custom-green: #8A8C56;
+    --custom-contrast-to-green:#D7BBF2;
+    --custom-tan: #D9C39A;
+    --custom-transparent-tan: #D9C39A80;
+    --custom-brown: #73603D;
+    --custom-dark-yellow: #A68A00;
+    --custom-medium-yellow: #FFD700;
+    --custom-light-yellow: #FFFACD;
+    --custom-red:#A50000;
+    --custom-embellishment-name: ;
+}
+
+/* ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+    /* Can alternatively define in html {}. */
+    background-color: ;
+    background-image: url("./images/army-tent.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    color:var(--custom-green);
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    /* Define with at least one font name and its related generic family name.*/
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 15px;
+    max-width: 100%;
+    min-width: 550px;
+    
+}
+
+/* ----- Page layout blocks ----- */
+header {
+    color:var(--custom-red);
+    margin: 10px;
+    padding: 5%;
+    border: 10px solid var(--custom-transparent-tan);
+    background-color: var(--custom-light-yellow);
+    justify-content: center;
+    text-align: center;
+}
+
+main {
+    color:var(--custom-red);
+    margin: 10px;
+    margin-top:0px;
+    padding: 5%;
+    border: 10px solid var(--custom-transparent-tan);
+    background-color: var(--custom-light-yellow);
+
+
+}
+
+label {
+    display: block;
+    
+}
+section {}
+
+article {}
+
+#topic1 {}
+
+#topic2 {}
+
+div {}
+
+
+aside {}
+
+footer {
+    color:var(--custom-brown);
+    margin: 10px;
+    padding: 5%;
+    border: 10px solid var(--custom-transparent-tan);
+    background-color: var(--custom-light-yellow);
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+
+a:link {}
+
+a:hover {}
+
+a:active {}
+
+a:visited {}
+
+/* ----- Navigation ----- Override text links for navigation only. */
+nav {
+    color:var(--custom-red);
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+    border: 10px solid var(--custom-transparent-tan);
+    background-color: var(--custom-light-yellow);
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    flex-wrap: wrap;
+
+}
+
+nav a {
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top:2px;
+    background-color: var(--custom-transparent-tan);
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    color:var(--custom-brown);
+    flex-wrap: wrap;
+    width: 175px;
+    text-align: center;
+    justify-content: center;
+}
+
+nav a:hover {
+    background-color: var(--custom-red)
+}
+
+.local {
+    margin: 2px;
+    padding: 5px;
+    padding-top:1px;
+    padding-bottom: 1px;
+    margin-bottom: 0px;
+    margin-top:0px;
+    border:3px solid var(--custom-medium-yellow);
+    background-color: whitesmoke;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.gallery {
+    display: flex;
+
+    margin: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 10px;
+    border: 10px solid var(--custom-transparent-tan);
+    background-color: var(--custom-light-yellow);
+    justify-content: center;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    flex-wrap: wrap;
+
+}
+
+.gallery figure {
+    height: 400px;
+    width: 400px;
+    border: 10px solid var(--custom-transparent-tan);
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+/* ----- Typography ----- */
+p {}
+
+br {}
+
+ol,
+ul,
+dl {}
+
+li {}
+
+dt {}
+
+dd {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+h1 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+h2 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+
+}
+
+h3 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+h4 {}
+
+h5 {}
+
+h6 {}

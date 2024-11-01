@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Amidon</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <image src="./android-chrome-192x192.png" alt="favicon KA" width="30px" height="30px"></image>
+            Kevin Amidon
+        </h1>
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <article>
+                <form action="/results" method="POST">
+                    <fieldset>
+                        <legend>Provide information about yourself</legend>
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required autofocus placeholder="John Smith"></input>
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required placeholder="john.smith@gmail.com"></input>
+
+                        <label for="about">Tell us about you?</label>
+                        <textarea rows="4" id="about" name="about" required placeholder="I am a software developer interested in web development..."></textarea>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Feedback welcome</legend>
+
+                        <label for="reasonForVisit">What is your reason for visiting the site?</label>
+                        <select name="reasonForVisit">
+                            <option value="web development">I am interested in learning web development</option>
+                            <option value="kevin">I am interested in learning about Kevin</option>
+                            <option value="pictures">I am interested in the pictures</option>
+                            <option value="no reason">No reason, just scrolling</option>
+                        </select>
+                        <p>Do you like the site?</p>
+                        <label for="likeYes">
+                            <input type="radio" id="likeYes" name="likeOption" value="yes">Yes
+                        </label>
+                        <label for="likeNo">
+                            <input type="radio" id="likeNo" name="likeOption" value="no">No
+                        </label>
+                        <label for="likeALittle">
+                            <input type="radio" id="likeALittle" name="likeOption" value="a little">A little bit, it
+                            needs some work.
+                        </label>
+
+
+                        <p>What type of content would you like to see added to the site?</p>
+                        <label for="content">
+                            <input type="checkbox" id="content" name="addContent" value="web development informaiton">
+                            More information about web development
+                        </label>
+                        <label for="Kevin">
+                            <input type="checkbox" id="Kevin" name="addContent" value="informaiton about Kevin">
+                            More information about Kevin
+                        </label>
+                        <label for="pictures">
+                            <input type="checkbox" id="pictures" name="addContent" value="more pictures">
+                            More pictures
+                        </label>
+                        <label for="professionalBlogPosts">
+                            <input type="checkbox" id="cprofessionalBlogPosts" name="addContent"
+                                value="professional blog posts">
+                            More professional blog posts
+                        </label>
+
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+<footer>
+    <p>&copy; 2024 Kevin Amidon</p>
+</footer>
+
+</html>
