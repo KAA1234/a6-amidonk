@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset='utf-8'>
+    <title>Kevin Amidon</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <image src="./android-chrome-192x192.png" alt="favicon KA" width="30px" height="30px"></image>
+            Kevin Amidon
+        </h1>
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./order.html">Order</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Order</h2>
+            <article>
+                <p>Provide information about yourself and submit orders below.</p>
+                <form action="/order" method="POST">
+                    <fieldset>
+                        <legend>Provide information about yourself</legend>
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required autofocus placeholder="John Smith"></input>
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required placeholder="john.smith@gmail.com"></input>
+
+                        <label for="about">Tell us about you?</label>
+                        <textarea rows="4" id="about" name="about" required placeholder="I am a software developer interested in web development..."></textarea>
+
+                    </fieldset>
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+                </article>
+       </section>
+    </main>
+</body>
+<footer>
+    <p>&copy; 2024 Kevin Amidon</p>
+</footer>
+
+</html>
