@@ -69,6 +69,17 @@ main {
 
 }
 
+table {
+    text-align: left;
+    border-spacing: 20px;}
+
+#confirmation {
+    border-bottom: 5px solid red;
+    max-width: 750px;
+
+}
+
+
 label {
     display: block;
     

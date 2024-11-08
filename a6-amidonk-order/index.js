@@ -36,6 +36,7 @@ let htmlTop = `
     <nav>
         <a href="./index.html">Home</a>
         <a href="./gallery.html">Gallery</a>
+        <a href="./order.html">Order</a>
         <a href="./contact.html">Contact</a>
     </nav>
     <main>`
@@ -60,14 +61,16 @@ app.get("/", (req, res) => {
 });
 
 app.post("/results", (req, res) => {
-      const name = req.body.name
-      const email = req.body.email
-      const about = req.body.about
-      const reasonForVisit = req.body.reasonForVisit
-      const likeOption = req.body.likeOption
-      const addContent = req.body.addContent
+  const name = req.body.name
+  const email = req.body.email
+  const about = req.body.about
+  const reasonForVisit = req.body.reasonForVisit
+  const prodOrder = req.body.prodOrder
+  const addContent = req.body.addContent
+  const likeOption = req.body.likeOption
 
-      res.send(`
+
+  res.send(`
     ${htmlTop} 
     <section>
       <h2>Response</h2>
@@ -81,8 +84,63 @@ app.post("/results", (req, res) => {
           
         </article>  
     </section>
-    ${htmlBottom}`)});
+    ${htmlBottom}`)
+});
 
-      app.listen(PORT, () => {
-        console.log(`Server listening on port ${PORT}...`);
-      });
+const cart = require('./products.js').products
+
+function CompProdData(prodOrder) {
+  for (const oneItem of cart) {
+    if (oneItem.product === prodOrder) {
+      return oneItem;
+    }
+  }
+}
+
+function CalculateTotal(price, quantity) {
+  let total = price * quantity;
+  const totalCurrency = total.toLocaleString('en-us', 
+    {style: 'currency', currency: 'USD', minimumFractionDigits: 2});
+    return totalCurrency;
+}
+
+app.post("/order", (req, res) => {
+  const name = req.body.name
+  const email = req.body.email
+  const address = req.body.address
+  const itemSelected = CompProdData(req.body.prodOrder)
+  const quant = req.body.quant
+  const unitPrice = req.body.itemSelected
+  const totalPrice = CalculateTotal(req.body.quant,itemSelected.price)
+  const delivery = req.body.delivery
+  const itemPrice = itemSelected.price.toLocaleString('en-us', 
+    {style: 'currency', currency: 'USD', minimumFractionDigits: 2});
+
+
+  const likeOption = req.body.likeOption
+  const addContent = req.body.addContent
+
+
+
+  res.send(`
+    
+    ${htmlTop} 
+    <section>
+      <h2 id=confirmation>Confirmation of Purchase</h2>
+        <article>
+
+          <h3>Congratulations ${name}</h3>
+          <p>You have completed your order for <strong>${quant} ${itemSelected.product}</strong> made by <strong>${itemSelected.company}</strong>.</p>
+          <p>Your price per unit is <strong>${itemPrice}</strong> and your total cost is <strong>${totalPrice}</strong>.</p>
+          <p>Your order will be delivered to: <strong>${address}</strong>.</p>
+          <p>Your ordered instructions are <strong>${delivery}</strong>. </p>
+
+          
+        </article>  
+    </section>
+    ${htmlBottom}`)
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});

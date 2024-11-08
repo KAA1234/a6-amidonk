@@ -44,15 +44,90 @@
                         <label for="email">Email</label>
                         <input type="text" id="email" name="email" required placeholder="john.smith@gmail.com"></input>
 
-                        <label for="about">Tell us about you?</label>
-                        <textarea rows="4" id="about" name="about" required placeholder="I am a software developer interested in web development..."></textarea>
+                        <label for="address">Provide your address</label>
+                        <textarea rows="2" id="address" name="address" required
+                            placeholder="123 Sesame Stree, New York, NY 123456"></textarea>
+
+                        <label for="delivery">Provide your delivery instructions</label>
+                        <textarea rows="4" id="delivery" name="delivery" required
+                            placeholder="Hide behind lawn nomes"></textarea>
 
                     </fieldset>
-                </fieldset>
-                <input type="submit" value="Submit">
-            </form>
-                </article>
-       </section>
+                    <fieldset>
+                        <legend>Select your order below</legend>
+                        <table>
+                            <caption>Choose one item and set the quantity</caption>
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AGYM</td>
+                                    <td>
+                                        <label for="agym">
+                                            <input type="radio" required name="prodOrder" id="agym"
+                                                value="Spinning Cat Scratcher Ball" />Spinning Cat Scratcher Ball
+                                        </label>
+                                    </td>
+                                    <td>$52.99</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Jasonwell</td>
+                                    <td>
+                                        <label for="jasonwell">
+                                            <input type="radio" required name="prodOrder" id="jasonwell"
+                                                value="Foldable Dog Pool" />Foldable Dog Pool
+                                        </label>
+                                    </td>
+                                    <td>$27.25</td>
+                                </tr>
+                                <tr>
+                                    <td>Expawlorer</td>
+                                    <td>
+                                        <label for="expawlorer">
+                                            <input type="radio" required name="prodOrder" id="expawlorer"
+                                                value="Dog Fence Window" />Dog Fence Window
+                                        </label>
+                                    </td>
+                                    <td>$30.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td>
+                                        <label for="lollimew">
+                                            <input type="radio" required name="prodOrder" id="lollimewo"
+                                                value="Capsule Pet Travel Backpack" />Capsule Pet Travel Backpack
+                                        </label>
+                                    </td>
+                                    <td>$59.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Droll'd</td>
+                                    <td>
+                                        <label for="droolld">
+                                            <input type="radio" required name="prodOrder" id="droolld"
+                                                value="Cat Hamster Wheel" />Cat Hamster Wheel
+                                        </label>
+                                    </td>
+                                    <td>$349.75</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <label for="quant">Enter amount between 1 and 10:</label>
+                        <input placeholder="1-10" type="number" name="quant" id="quant" maxlength="2" minlength="1"
+                            max="10" min="1" required />
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </section>
     </main>
 </body>
 <footer>
